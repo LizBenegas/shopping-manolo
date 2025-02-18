@@ -18,8 +18,10 @@ Este proyecto consiste en una aplicación web que permite a los usuarios navegar
 
 ## Tecnologías Utilizadas
 
-- **HTML**: 81%
-- **CSS**: 19%
+- **HTML**: 20%
+- **CSS**: 20%
+ **javascript**: 60%
+
 
 ## Instalación
 
