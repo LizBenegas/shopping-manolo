@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shopping-Manolo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="todo-inicio" id="inicio">
+    <header>
+      <div class="container">
+          <div class="manolo">
+              <img src="https://ninkasi.com.tr/img/blankuser.png" alt="Imagen">
+              <span>Manolo</span>
+          </div>
+
+          <div class="navegaition">
+              <ul>
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="catalogo.html">Catálogo</a></li>
+                  <li><a href="ofertas.html">Ofertas</a></li>
+                  <li><a href="contacto.html">Contactos</a></li>
+                  <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+                  <li><a href="cesta.html">Cesta (<span id="cart-count">0</span>)</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="filters">
+          <label for="price-filter">Precio:</label>
+          <select id="price-filter">
+            <option value="all">Todos</option>
+            <option value="low">Menos de $50</option>
+            <option value="medium">$50 - $100</option>
+            <option value="high">Más de $100</option>
+          </select>
+          <label for="category-filter">Tipo de ropa:</label>
+          <select id="category-filter">
+            <option value="all">Todos</option>
+            <option value="casual">Casual</option>
+            <option value="formal">Formal</option>
+            <option value="deportivo">Deportivo</option>
+          </select>
+          <label for="color-filter">Color:</label>
+          <select id="color-filter">
+            <option value="all">Todos</option>
+            <option value="rojo">Rojo</option>
+            <option value="azul">Azul</option>
+            <option value="negro">Negro</option>
+            <option value="blanco">Blanco</option>
+          </select>
+        </div>
+      </div>
+      <hr>
+  </header>
+
+    <aside>
+      <div class="baner">
+        <img src="https://cdn.pixabay.com/photo/2019/02/10/15/09/clothes-3987460_1280.jpg" alt="banner">
+        <div class="p-6 bg-background">
+          <h1 class="text-3xl font-bold text-center text-primary">Shopping Manolo</h1>
+          <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar productos...">
+            <button id="search-button">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <article>
+        <div class="grid">
+          <div class="bg-card" data-product-id="1" data-product-name="Conjunto casual"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg"
+              alt="vestido casual" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Conjunto casual</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+          <div class="bg-card" data-product-id="2" data-product-name="Conjunto elegante femenino"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg"
+              alt="traje masculino" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Conjunto elegante femenino</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+          <div class="bg-card" data-product-id="3" data-product-name="Vestido de noche"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg"
+              alt="conjunto casual juvenil" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Vestido de noche</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="bg-card" data-product-id="1" data-product-name="Conjunto casual"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg"
+              alt="vestido casual" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Conjunto casual</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+          <div class="bg-card" data-product-id="2" data-product-name="Conjunto elegante femenino"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg"
+              alt="traje masculino" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Conjunto elegante femenino</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+          <div class="bg-card" data-product-id="3" data-product-name="Vestido de noche"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg"
+              alt="conjunto casual juvenil" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Vestido de noche</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="bg-card" data-product-id="1" data-product-name="Conjunto casual"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg"
+              alt="vestido casual" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Conjunto casual</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+          <div class="bg-card" data-product-id="2" data-product-name="Conjunto elegante femenino"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg"
+              alt="traje masculino" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Conjunto elegante femenino</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+          <div class="bg-card" data-product-id="3" data-product-name="Vestido de noche"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg"
+              alt="conjunto casual juvenil" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Vestido de noche</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="bg-card" data-product-id="1" data-product-name="Conjunto casual"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg"
+              alt="vestido casual" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Conjunto casual</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+          <div class="bg-card" data-product-id="2" data-product-name="Conjunto elegante femenino"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg"
+              alt="traje masculino" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Conjunto elegante femenino</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+          <div class="bg-card" data-product-id="3" data-product-name="Vestido de noche"
+            data-product-price="68.56" data-product-image="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg">
+            <img src="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg"
+              alt="conjunto casual juvenil" />
+            <div class="p-4">
+              <h2 class="text-lg font-semibold">Vestido de noche</h2>
+              <p class="text-muted-foreground">$68.56</p>
+              <button
+                class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir
+                al carrito</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+  // Funciones para el carrito
+
+  const cartCountSpan = document.getElementById('cart-count');
+
+  function getCart() {
+    return JSON.parse(localStorage.getItem('cart')) || [];
+  }
+
+  function saveCart(cart) {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  function updateCartCount() {
+    const cart = getCart();
+    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCountSpan.textContent = totalQuantity;
+  }
+
+  updateCartCount();
+
+  // Si estamos en la página de inicio (index.html o raíz), activa los botones de "Añadir al carrito"
+  if (window.location.pathname.endsWith('/index.html') || window.location.pathname === '/') {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const product = button.closest('.bg-card');
+        const productId = product.dataset.productId;
+        const productName = product.dataset.productName;
+        const productPrice = parseFloat(product.dataset.productPrice);
+        const productImage = product.dataset.productImage;
+
+        const cart = getCart();
+        const existingProduct = cart.find(item => item.id === productId);
+
+        if (existingProduct) {
+          existingProduct.quantity++;
+        } else {
+          cart.push({
+            id: productId,
+            name: productName,
+            price: productPrice,
+            quantity: 1,
+            image: productImage
+          });
+        }
+        saveCart(cart);
+        updateCartCount();
+      });
+    });
+  }
+
+
+  // Funciones para el filtrado
+ 
+  // Si existen los selects de filtro, los activamos
+  const priceFilterEl = document.getElementById("price-filter");
+  const categoryFilterEl = document.getElementById("category-filter");
+  const colorFilterEl = document.getElementById("color-filter");
+
+  if (priceFilterEl && categoryFilterEl && colorFilterEl) {
+    function filterProducts() {
+      const priceFilter = priceFilterEl.value;
+      const categoryFilter = categoryFilterEl.value;
+      const colorFilter = colorFilterEl.value;
+      
+      // data-product-price, data-product-category, data-product-color
+      const products = document.querySelectorAll(".bg-card");
+      
+      products.forEach(product => {
+        const productPrice = parseFloat(product.dataset.productPrice);
+        const productCategory = product.dataset.productCategory;
+        const productColor = product.dataset.productColor;
+        
+        let show = true;
+        
+        // Filtrado por precio
+        if (priceFilter === "low" && productPrice >= 50) {
+          show = false;
+        } else if (priceFilter === "medium" && (productPrice < 50 || productPrice > 100)) {
+          show = false;
+        } else if (priceFilter === "high" && productPrice <= 100) {
+          show = false;
+        }
+        
+        // Filtrado por categoría
+        if (categoryFilter !== "all" && productCategory !== categoryFilter) {
+          show = false;
+        }
+        
+        // Filtrado por color
+        if (colorFilter !== "all" && productColor !== colorFilter) {
+          show = false;
+        }
+        
+        product.style.display = show ? "" : "none";
+      });
+    }
+    
+    // Agregar event listeners a los selects
+    priceFilterEl.addEventListener("change", filterProducts);
+    categoryFilterEl.addEventListener("change", filterProducts);
+    colorFilterEl.addEventListener("change", filterProducts);
+    
+    // Llamamos una vez para aplicar los filtros por defecto
+    filterProducts();
+  }
+});
+
+  </script>
+</body>
+
+</html>

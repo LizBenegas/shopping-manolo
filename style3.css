@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/009/279/989/original/pink-pastel-color-abstract-background-design-and-soft-pastel-color-concept-wallpaper-concept-free-vector.jpg); /* Establecer la imagen de fondo si es necesario */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Header */
+header {
+    background-color: #ee7b79;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.manolo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.manolo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navegaition ul {
+    list-style: none;
+    display: flex;
+}
+
+.navegaition li {
+    margin: 0 15px;
+}
+
+.navegaition a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navegaition a:hover {
+    color: #1b0b0a;
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px 0;
+}
+
+/* Título */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Contenedor de la cesta */
+#cart-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Estilos para cada elemento del carrito */
+.cart-item {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.cart-item:hover {
+    transform: scale(1.02);
+}
+
+.cart-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.cart-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cart-item p {
+    color: #666;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Estilos para los botones dentro de cada elemento del carrito */
+.cart-item button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Botón para restar cantidad (-) */
+.cart-item .subtract-quantity {
+    background-color: #ee7b79;
+    color: #fff;
+}
+
+.cart-item .subtract-quantity:hover {
+    background-color: #d66564;
+}
+
+/* Botón para añadir cantidad (+) */
+.cart-item .add-quantity {
+    background-color: #ee7b79;
+    color: #fff;
+}
+
+.cart-item .add-quantity:hover {
+    background-color: #d66564;
+}
+
+/* Botón para eliminar producto */
+.cart-item .remove-from-cart {
+    background-color: transparent;
+    color: #ee7b79;
+    border: 1px solid #ee7b79;
+}
+
+.cart-item .remove-from-cart:hover {
+    background-color: #ee7b79;
+    color: #fff;
+}
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para las etiquetas de cada filtro */
+  .filters label {
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 1rem;
+  }
+  
+  /* Estilo para los select de filtros */
+  .filters select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .filters select:focus {
+    border-color: #ff6f61;
+  }
+
+/* Media Queries */
+
+/* Para pantallas grandes */
+@media (min-width: 1200px) {
+    #cart-items {
+        grid-template-columns: repeat(4, 1fr); /* Cuatro elementos por fila en pantallas grandes */
+    }
+
+    .cart-item {
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Para pantallas medianas */
+@media (max-width: 1200px) and (min-width: 768px) {
+    #cart-items {
+        grid-template-columns: repeat(3, 1fr); /* Tres elementos por fila */
+    }
+
+    .cart-item {
+        max-width: 280px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .manolo span {
+        font-size: 1.3rem;
+    }
+
+    .navegaition ul {
+        flex-direction: column;
+    }
+
+    .navegaition li {
+        margin: 10px 0;
+    }
+
+    #cart-items {
+        grid-template-columns: repeat(2, 1fr); /* Dos elementos por fila */
+    }
+
+    .cart-item {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Para pantallas móviles (baja resolución) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #cart-items {
+        grid-template-columns: 1fr; /* Un solo elemento por fila */
+        padding: 0 10px;
+    }
+
+    .cart-item {
+        max-width: 100%;
+    }
+
+    .cart-item button {
+        width: 100%;
+        font-size: 1rem;
+    }
+}

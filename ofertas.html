@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - Tienda Manolo</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="manolo">
+                <img src="https://ninkasi.com.tr/img/blankuser.png" alt="Imagen">
+                <span>Manolo</span>
+            </div>
+
+            <div class="navegaition">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="contacto.html">Contactos</a></li>
+                    <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+                    <li><a href="cesta.html">Cesta (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="filters">
+          <label for="price-filter">Precio:</label>
+          <select id="price-filter">
+            <option value="all">Todos</option>
+            <option value="low">Menos de $50</option>
+            <option value="medium">$50 - $100</option>
+            <option value="high">Más de $100</option>
+          </select>
+          <label for="category-filter">Tipo de ropa:</label>
+          <select id="category-filter">
+            <option value="all">Todos</option>
+            <option value="casual">Casual</option>
+            <option value="formal">Formal</option>
+            <option value="deportivo">Deportivo</option>
+          </select>
+          <label for="color-filter">Color:</label>
+          <select id="color-filter">
+            <option value="all">Todos</option>
+            <option value="rojo">Rojo</option>
+            <option value="azul">Azul</option>
+            <option value="negro">Negro</option>
+            <option value="blanco">Blanco</option>
+          </select>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- Banner -->
+    <div class="baner">
+        <img src="https://cdn.pixabay.com/photo/2019/02/10/15/09/clothes-3987460_1280.jpg" alt="Banner de Ofertas">
+        <div class="p-6 bg-background">
+            <h1 class="text-primary">¡Grandes Ofertas en Productos!</h1>
+            <p class="text-muted-foreground">Encuentra descuentos increíbles en nuestra tienda</p>
+            <div class="search-bar">
+              <input type="text" id="search-input" placeholder="Buscar productos...">
+              <button id="search-button">Buscar</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Sección de Ofertas -->
+    <main class="main">
+      
+        <div class="grid">
+            <div class="offer-page">
+                <header class="offer-banner text-center bg-primary text-white p-4">
+                  <h1 class="text-2xl font-bold">¡Ofertas Especiales!</h1>
+                  <p>¡No te pierdas nuestros descuentos exclusivos en ropa de moda!</p>
+                </header>
+              
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+                  <div class="bg-card border border-gray-300 p-4 rounded-lg shadow-lg">
+                    <img src="https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg" alt="Conjunto casual" class="img-ofertas">
+                    <div class="p-4">
+                      <h2 class="text-lg font-semibold">Conjunto Casual</h2>
+                      <p class="text-red-500 line-through">$68.56</p>
+                      <p class="text-xl font-semibold text-green-600">$49.99</p>
+                      <button class="add-to-cart bg-primary text-white hover:bg-primary/80 rounded-lg p-2 mt-2">Añadir al carrito</button>
+                    </div>
+                  </div>
+              
+                  <div class="bg-card border border-gray-300 p-4 rounded-lg shadow-lg">
+                    <img src="https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg" alt="Conjunto elegante femenino" class="img-ofertas">
+                    <div class="p-4">
+                      <h2 class="text-lg font-semibold">Conjunto Elegante Femenino</h2>
+                      <p class="text-red-500 line-through">$68.56</p>
+                      <p class="text-xl font-semibold text-green-600">$49.99</p>
+                      <button class="add-to-cart bg-primary text-white hover:bg-primary/80 rounded-lg p-2 mt-2">Añadir al carrito</button>
+                    </div>
+                  </div>
+              
+                  <div class="bg-card border border-gray-300 p-4 rounded-lg shadow-lg">
+                    <img src="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg" alt="Vestido de noche" class="img-ofertas">
+                    <div class="p-4">
+                      <h2 class="text-lg font-semibold">Vestido de Noche</h2>
+                      <p class="text-red-500 line-through">$68.56</p>
+                      <p class="text-xl font-semibold text-green-600">$49.99</p>
+                      <button class="add-to-cart bg-primary text-white hover:bg-primary/80 rounded-lg p-2 mt-2">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+                  <div class="bg-card border border-gray-300 p-4 rounded-lg shadow-lg">
+                    <img src="https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg" alt="Conjunto casual" class="img-ofertas">
+                    <div class="p-4">
+                      <h2 class="text-lg font-semibold">Conjunto Casual</h2>
+                      <p class="text-red-500 line-through">$68.56</p>
+                      <p class="text-xl font-semibold text-green-600">$49.99</p>
+                      <button class="add-to-cart bg-primary text-white hover:bg-primary/80 rounded-lg p-2 mt-2">Añadir al carrito</button>
+                    </div>
+                  </div>
+              
+                  <div class="bg-card border border-gray-300 p-4 rounded-lg shadow-lg">
+                    <img src="https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg" alt="Conjunto elegante femenino" class="img-ofertas">
+                    <div class="p-4">
+                      <h2 class="text-lg font-semibold">Conjunto Elegante Femenino</h2>
+                      <p class="text-red-500 line-through">$68.56</p>
+                      <p class="text-xl font-semibold text-green-600">$49.99</p>
+                      <button class="add-to-cart bg-primary text-white hover:bg-primary/80 rounded-lg p-2 mt-2">Añadir al carrito</button>
+                    </div>
+                  </div>
+              
+                  <div class="bg-card border border-gray-300 p-4 rounded-lg shadow-lg">
+                    <img src="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg" alt="Vestido de noche" class="img-ofertas">
+                    <div class="p-4">
+                      <h2 class="text-lg font-semibold">Vestido de Noche</h2>
+                      <p class="text-red-500 line-through">$68.56</p>
+                      <p class="text-xl font-semibold text-green-600">$49.99</p>
+                      <button class="add-to-cart bg-primary text-white hover:bg-primary/80 rounded-lg p-2 mt-2">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </div>
+              
+
+
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+                  <div class="bg-card border border-gray-300 p-4 rounded-lg shadow-lg">
+                    <img src="https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg" alt="Conjunto casual" class="img-ofertas">
+                    <div class="p-4">
+                      <h2 class="text-lg font-semibold">Conjunto Casual</h2>
+                      <p class="text-red-500 line-through">$68.56</p>
+                      <p class="text-xl font-semibold text-green-600">$49.99</p>
+                      <button class="add-to-cart bg-primary text-white hover:bg-primary/80 rounded-lg p-2 mt-2">Añadir al carrito</button>
+                    </div>
+                  </div>
+              
+                  <div class="bg-card border border-gray-300 p-4 rounded-lg shadow-lg">
+                    <img src="https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg" alt="Conjunto elegante femenino" class="img-ofertas">
+                    <div class="p-4">
+                      <h2 class="text-lg font-semibold">Conjunto Elegante Femenino</h2>
+                      <p class="text-red-500 line-through">$68.56</p>
+                      <p class="text-xl font-semibold text-green-600">$49.99</p>
+                      <button class="add-to-cart bg-primary text-white hover:bg-primary/80 rounded-lg p-2 mt-2">Añadir al carrito</button>
+                    </div>
+                  </div>
+              
+                  <div class="bg-card border border-gray-300 p-4 rounded-lg shadow-lg">
+                    <img src="https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg" alt="Vestido de noche" class="img-ofertas">
+                    <div class="p-4">
+                      <h2 class="text-lg font-semibold">Vestido de Noche</h2>
+                      <p class="text-red-500 line-through">$68.56</p>
+                      <p class="text-xl font-semibold text-green-600">$49.99</p>
+                      <button class="add-to-cart bg-primary text-white hover:bg-primary/80 rounded-lg p-2 mt-2">Añadir al carrito</button>
+                    </div>
+                  </div>
+                </div>
+              
+              
+            
+              
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tienda Manolo | Todos los derechos reservados</p>
+        </div>
+    </footer>
+    
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const cartCountSpan = document.getElementById('cart-count');
+
+  // Función para obtener el carrito del localStorage
+  function getCart() {
+    return JSON.parse(localStorage.getItem('cart')) || [];
+  }
+
+  // Función para guardar el carrito en localStorage
+  function saveCart(cart) {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  // Función para actualizar el contador del carrito
+  function updateCartCount() {
+    const cart = getCart();
+    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCountSpan.textContent = totalQuantity;
+  }
+
+  updateCartCount();
+
+  // Selecciona todos los botones de "Añadir al carrito" de la página (ofertas)
+  const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Se obtiene la tarjeta del producto
+      const productCard = button.closest('.bg-card');
+
+      // Intenta obtener los datos desde atributos data-*, si existen
+      let productId = productCard.dataset.productId;
+      let productName = productCard.dataset.productName;
+      let productPrice = productCard.dataset.productPrice;
+      let productImage = productCard.dataset.productImage;
+
+      // Si faltan datos en el dataset, se extraen del DOM
+      if (!productName) {
+        const nameEl = productCard.querySelector('h2');
+        productName = nameEl ? nameEl.textContent.trim() : 'Producto sin nombre';
+      }
+      if (!productPrice) {
+        // Se asume que el precio visible es el de la oferta (último precio)
+        const priceEl = productCard.querySelector('p.text-xl');
+        if (priceEl) {
+          // Elimina el símbolo "$" y espacios, luego lo convierte a número
+          productPrice = parseFloat(priceEl.textContent.replace('$', '').trim());
+        } else {
+          productPrice = 0;
+        }
+      } else {
+        productPrice = parseFloat(productPrice);
+      }
+      if (!productImage) {
+        const imgEl = productCard.querySelector('img');
+        productImage = imgEl ? imgEl.src : '';
+      }
+      if (!productId) {
+        // Si no se proporciona ID, se genera uno a partir del nombre (en minúsculas y con guiones)
+        productId = productName.toLowerCase().replace(/\s+/g, '-');
+      }
+
+      // Se obtiene el carrito actual
+      const cart = getCart();
+      // Se busca si el producto ya existe en el carrito
+      const existingProduct = cart.find(item => item.id === productId);
+
+      if (existingProduct) {
+        // Si existe, se incrementa la cantidad
+        existingProduct.quantity++;
+      } else {
+        // Si no existe, se agrega un nuevo producto al carrito
+        cart.push({
+          id: productId,
+          name: productName,
+          price: productPrice,
+          quantity: 1,
+          image: productImage
+        });
+      }
+
+      // Se guarda el carrito actualizado y se actualiza el contador
+      saveCart(cart);
+      updateCartCount();
+
+      // Opcional: Notificar al usuario que el producto se agregó
+      alert(`${productName} se agregó al carrito.`);
+    });
+  });
+});
+
+  </script>
+</body>
+</html>

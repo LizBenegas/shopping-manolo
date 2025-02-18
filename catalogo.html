@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/009/279/989/original/pink-pastel-color-abstract-background-design-and-soft-pastel-color-concept-wallpaper-concept-free-vector.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Header */
+header {
+    background-color: #ee7b79;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.manolo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.manolo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navegaition ul {
+    list-style: none;
+    display: flex;
+}
+
+.navegaition li {
+    margin: 0 15px;
+}
+
+.navegaition a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navegaition a:hover {
+    color: #1b0b0a;
+}
+
+.manolo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Banner y Aside */
+.baner {
+    position: relative;
+}
+.baner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+.p-6.bg-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.text-primary {
+    color: white;
+    font-size: 2.5rem;
+}
+.text-3xl {
+    font-size: 2rem;
+}
+.font-bold {
+    font-weight: bold;
+}
+
+/* Controles de búsqueda */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+input[type="text"] {
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 50%;
+}
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #e04a3c;
+}
+
+/* Main - Catálogo */
+main {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenedor del catálogo */
+.container.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Tarjeta de producto */
+.bg-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.bg-card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen del producto */
+.bg-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Texto */
+.bg-card h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.bg-card p {
+    color: #777;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Botón de compra */
+.bg-card button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.bg-card button:hover {
+    background-color: #e04a3c;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .container.grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container.grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos para la navegación fija */
+.navegacion-fija {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ee7b79;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="todo-inicio" id="catalogo">
+        <header>
+            <div class="container">
+                <div class="manolo">
+                    <img src="https://ninkasi.com.tr/img/blankuser.png" alt="Imagen">
+                    <span>Manolo</span>
+                </div>
+
+                <div class="navegaition" id="menu-navegacion">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="contacto.html">Contactos</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+                        <li><a href="cesta.html">Cesta (<span id="cart-count">0</span>)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filters">
+                <label for="price-filter">Precio:</label>
+                <select id="price-filter">
+                  <option value="all">Todos</option>
+                  <option value="low">Menos de $50</option>
+                  <option value="medium">$50 - $100</option>
+                  <option value="high">Más de $100</option>
+                </select>
+                <label for="category-filter">Tipo de ropa:</label>
+                <select id="category-filter">
+                  <option value="all">Todos</option>
+                  <option value="casual">Casual</option>
+                  <option value="formal">Formal</option>
+                  <option value="deportivo">Deportivo</option>
+                </select>
+                <label for="color-filter">Color:</label>
+                <select id="color-filter">
+                  <option value="all">Todos</option>
+                  <option value="rojo">Rojo</option>
+                  <option value="azul">Azul</option>
+                  <option value="negro">Negro</option>
+                  <option value="blanco">Blanco</option>
+                </select>
+              </div>
+            </div>
+            <hr>
+        </header>
+
+        <aside>
+            <div class="baner">
+                <img src="https://cdn.pixabay.com/photo/2019/02/10/15/09/clothes-3987460_1280.jpg" alt="banner">
+                <div class="container p-6 bg-background">  <h1 class="text-3xl font-bold text-center text-primary">Catálogo de Productos</h1>
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="Buscar productos...">
+                        <button id="search-button">Buscar</button>
+                      </div>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <article>
+                <div class="container grid">  </div>
+            </article>
+        </main>
+    </div>
+
+ <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cartCountSpan = document.getElementById('cart-count');
+        const productGrid = document.querySelector('.grid');
+        const navegacion = document.getElementById('menu-navegacion');
+        const scrollThreshold = 100;
+
+        function getCart() {
+            return JSON.parse(localStorage.getItem('cart')) || [];
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function updateCartCount() {
+            const cart = getCart();
+            const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCountSpan.textContent = totalQuantity;
+        }
+
+        updateCartCount();
+
+        function createProductElement(product) {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('bg-card', 'p-4');
+            productDiv.dataset.productId = product.id;
+            productDiv.dataset.productName = product.name;
+            productDiv.dataset.productPrice = product.price;
+            productDiv.dataset.productImage = product.image;
+
+            productDiv.innerHTML = `
+                <img src="${product.image}" alt="${product.name}" />
+                <div class="p-4">
+                    <h2 class="text-lg font-semibold">${product.name}</h2>
+                    <p class="text-muted-foreground">$${product.price.toFixed(2)}</p>
+                    <button class="add-to-cart bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-lg p-2 mt-2">Añadir al carrito</button>
+                </div>
+            `;
+
+            return productDiv;
+        }
+
+        const products = [
+            { id: '1', name: 'Conjunto casual', price: 68.56, image: 'https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg' },
+            { id: '2', name: 'Conjunto elegante femenino', price: 78.99, image: 'https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg' },
+            { id: '3', name: 'Vestido de noche', price: 99.50, image: 'https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg' },
+            { id: '4', name: 'Conjunto casual', price: 68.56, image: 'https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg' },
+            { id: '5', name: 'Conjunto elegante femenino', price: 78.99, image: 'https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg' },
+            { id: '6', name: 'Vestido de noche', price: 99.50, image: 'https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg' },
+            { id: '7', name: 'Conjunto casual', price: 68.56, image: 'https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg' },
+            { id: '8', name: 'Conjunto elegante femenino', price: 78.99, image: 'https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg' },
+            { id: '9', name: 'Vestido de noche', price: 99.50, image: 'https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg' },
+            { id: '10', name: 'Conjunto casual', price: 68.56, image: 'https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg' },
+            { id: '11', name: 'Conjunto elegante femenino', price: 78.99, image: 'https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg' },
+            { id: '12', name: 'Vestido de noche', price: 99.50, image: 'https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg' },
+            { id: '13', name: 'Conjunto casual', price: 68.56, image: 'https://cdn.pixabay.com/photo/2023/09/16/16/00/woman-8257059_1280.jpg' },
+            { id: '14', name: 'Conjunto elegante femenino', price: 78.99, image: 'https://cdn.pixabay.com/photo/2019/08/07/07/05/woman-4390055_1280.jpg' },
+            { id: '15', name: 'Vestido de noche', price: 99.50, image: 'https://cdn.pixabay.com/photo/2022/08/01/11/03/woman-7357931_1280.jpg' },
+        ];
+
+        products.forEach(product => {
+            const productElement = createProductElement(product);
+            productGrid.appendChild(productElement);
+        });
+
+        productGrid.addEventListener('click', (event) => {
+            if (event.target.classList.contains('add-to-cart')) {
+                const product = event.target.closest('.bg-card');
+                const productId = product.dataset.productId;
+                const productName = product.dataset.productName;
+                const productPrice = parseFloat(product.dataset.productPrice);
+                const productImage = product.dataset.productImage;
+
+                const cart = getCart();
+                const existingProduct = cart.find(item => item.id === productId);
+
+                if (existingProduct) {
+                    existingProduct.quantity++;
+                } else {
+                    cart.push({
+                        id: productId,
+                        name: productName,
+                        price: productPrice,
+                        quantity: 1,
+                        image: productImage
+                    });
+                }
+
+                saveCart(cart);
+                updateCartCount();
+            }
+        });
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navegacion.classList.remove('menu-oculto');
+                navegacion.classList.add('menu-visible');
+            } else {
+                navegacion.classList.remove('menu-visible');
+                navegacion.classList.add('menu-oculto');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

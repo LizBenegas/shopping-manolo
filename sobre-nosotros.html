@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros - Shopping Manolo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Variables de colores (puedes moverlas a tu CSS global) */
+    :root {
+      --primary-color: #ee7b79;
+      --secondary-color: #ff6f61;
+      --hover-color: #e04a3c;
+      --text-color: #333;
+      --bg-color: #f4f4f9;
+    }
+
+    /* Estilos para el hero/banner */
+    .about-hero {
+      background-image: url("https://cdn.pixabay.com/photo/2019/02/10/15/09/clothes-3987460_1280.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      position: relative;
+      filter: brightness(60%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .about-hero h1 {
+      color: #fff;
+      font-size: 3rem;
+      z-index: 1;
+      animation: fadeSlide 1s ease-out forwards;
+    }
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Contenedor principal de "Sobre Nosotros" */
+    .about-content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .about-section {
+      margin-bottom: 40px;
+    }
+    .about-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+      animation: fadeSlide 1s ease-out forwards;
+    }
+    .about-section p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 20px;
+      animation: fadeSlide 1s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+
+    /* Sección de Equipo */
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .team-member {
+      flex: 1 1 250px;
+      max-width: 300px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .team-member img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    .team-member h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+    .team-member p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Ajustes generales para header, footer y contenedores */
+    /* (Estos estilos se asumen coherentes con el resto de tu sitio) */
+
+    /* Header y navegación */
+    header {
+      background-color: var(--primary-color);
+      padding: 20px 0;
+      color: #fff;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .manolo {
+      display: flex;
+      align-items: center;
+    }
+    .manolo img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .manolo span {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .navegaition ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+    .navegaition a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    .navegaition a:hover {
+      color: #1e1312;
+    }
+    /* Footer */
+    footer {
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .navegaition ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .about-content {
+        padding: 0 10px;
+      }
+      .team {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    @media (max-width: 480px) {
+      .about-hero h1 {
+        font-size: 2.5rem;
+      }
+      .about-section h2 {
+        font-size: 1.8rem;
+      }
+      .about-section p {
+        font-size: 1rem;
+      }
+      footer p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="manolo">
+        <img src="https://ninkasi.com.tr/img/blankuser.png" alt="Imagen">
+        <span>Manolo</span>
+      </div>
+      <div class="navegaition">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="cesta.html">Cesta (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero/Banner -->
+  <section class="about-hero">
+    <h1>Sobre Nosotros</h1>
+  </section>
+
+  <!-- Contenido Principal -->
+  <main>
+    <div class="about-content">
+      <section class="about-section">
+        <h2>Nuestra Historia</h2>
+        <p>
+          Shopping Manolo nació de la pasión por la moda y el deseo de ofrecer productos de calidad a precios accesibles.
+          Desde nuestros inicios, hemos trabajado con dedicación para crear una experiencia de compra única y personalizada para nuestros clientes.
+          Con el tiempo, nos hemos convertido en un referente en el sector, adaptándonos a las tendencias y necesidades del mercado.
+        </p>
+      </section>
+      <section class="about-section">
+        <h2>Misión y Visión</h2>
+        <p>
+          <strong>Misión:</strong> Brindar a nuestros clientes una amplia selección de prendas de moda, garantizando calidad, innovación y un excelente servicio.
+        </p>
+        <p>
+          <strong>Visión:</strong> Convertirnos en la tienda de referencia en el mundo de la moda, creando tendencias y superando las expectativas de nuestros clientes.
+        </p>
+      </section>
+      <section class="about-section">
+        <h2>Nuestros Valores</h2>
+        <p>
+          La integridad, la innovación, el compromiso con la calidad y el servicio al cliente son la base de todo lo que hacemos.
+          Nos esforzamos por escuchar a nuestros clientes y adaptarnos a sus necesidades, ofreciendo siempre lo mejor.
+        </p>
+      </section>
+      <section class="about-section">
+        <h2>Nuestro Equipo</h2>
+        <div class="team">
+          <div class="team-member">
+            <img src="https://cdn.pixabay.com/photo/2016/07/15/00/11/happy-1517986_1280.jpg" alt="manolo">
+            <h3>Juan Pérez</h3>
+            <p>Fundador y Director Ejecutivo</p>
+          </div>
+          <div class="team-member">
+            <img src="https://cdn.pixabay.com/photo/2020/10/30/11/45/woman-5698386_1280.jpg" alt="Ana Gómez">
+            <h3>Ana Gómez</h3>
+            <p>Gerente de Ventas</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Shopping Manolo | Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    // Actualización del contador de carrito (si se usa)
+    document.addEventListener('DOMContentLoaded', () => {
+      const cartCountSpan = document.getElementById('cart-count');
+      function getCart() {
+        return JSON.parse(localStorage.getItem('cart')) || [];
+      }
+      function updateCartCount() {
+        const cart = getCart();
+        const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartCountSpan.textContent = totalQuantity;
+      }
+      updateCartCount();
+    });
+  </script>
+</body>
+</html>
