@@ -1,4 +1,4 @@
-Aquí tienes un ejemplo de README para tu proyecto "shopping-manolo":
+ "shopping-manolo":
 
 ```markdown
 # Shopping Manolo
