@@ -1,4 +1,4 @@
- "shopping-manolo":
+Aquí tienes el README completo para tu proyecto "shopping-manolo" con JavaScript como lenguaje principal:
 
 ```markdown
 # Shopping Manolo
@@ -7,7 +7,7 @@ Shopping Manolo es un proyecto web diseñado para ofrecer la mejor experiencia d
 
 ## Descripción
 
-Este proyecto consiste en una aplicación web que permite a los usuarios navegar, buscar y comprar productos de manera fácil y rápida. La aplicación está desarrollada principalmente utilizando HTML y CSS.
+Este proyecto consiste en una aplicación web que permite a los usuarios navegar, buscar y comprar productos de manera fácil y rápida. La aplicación está desarrollada principalmente utilizando HTML, CSS y JavaScript.
 
 ## Características
 
@@ -18,10 +18,9 @@ Este proyecto consiste en una aplicación web que permite a los usuarios navegar
 
 ## Tecnologías Utilizadas
 
-- **HTML**: 20%
-- **CSS**: 20%
- **javascript**: 60%
-
+- **JavaScript**: 60%
+- **HTML**: 25%
+- **CSS**: 15%
 
 ## Instalación
 
@@ -48,7 +47,6 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 ## Contacto
 
 Para cualquier consulta, puedes contactarme a través de [mi perfil de GitHub](https://github.com/LizBenegas).
-
 ```
 
-Puedes copiar y pegar este contenido en tu archivo `README.md`.
+Puedes copiar y pegar este contenido en tu archivo `README.md`. Si necesitas más modificaciones o agregar más detalles, por favor házmelo saber.
